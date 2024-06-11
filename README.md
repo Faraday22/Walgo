@@ -18,3 +18,5 @@ This Currently only supports / is in development for SwayWM
 - [ ] Installation Process
 - [ ] AUR Package
 - [ ] Multiple Window Managers Support
+- [ ] Make Wiki
+- [ ] Make READMD look professional
