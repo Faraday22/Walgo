@@ -13,7 +13,7 @@ This Currently only supports / is in development for SwayWM
 # Todo
 
 - [x] Config Directory Creation
-- [ ] Config File
+- [x] Config File
 - [ ] Changing Wallpaper path/var
 - [ ] Installation Process
 - [ ] AUR Package
