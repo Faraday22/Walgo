@@ -1,15 +1,18 @@
 package main
 
 import (
-  "fmt"
-  "os/exec"
-  "github.com/faraday22/Walgo/startup"
+	"fmt"
+	"os"
+	"os/exec"
+
+	"github.com/faraday22/Walgo/startup"
 )
 
 func clear_screen(){
 
-  exec.Command("clear").Run();  
-
+  cmd := exec.Command("clear");  
+  cmd.Stdout = os.Stdout;
+  cmd.Run();
 }
 
 
