@@ -8,12 +8,13 @@ This is a Cli app but will Hopeful have a gui app soon.
 
 # Notice
 
-This Currently only supports SwayWM
-
-
+This Currently only supports / is in development for SwayWM
 
 # Todo
 
-- [] Installation Process
-- [] Aur Package
-- [] Multiple Window Manager Supports
+- [x] Config Directory Creation
+- [ ] Config File
+- [ ] Changing Wallpaper path/var
+- [ ] Installation Process
+- [ ] AUR Package
+- [ ] Multiple Window Managers Support
