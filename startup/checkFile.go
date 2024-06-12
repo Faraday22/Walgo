@@ -17,7 +17,7 @@ func CheckConfigFile(){
   } else if os.IsNotExist(err) {
       fmt.Println("Config ", PATH, " doesn't exist");
       // Created Walgo.toml file 
-      defaultConfig := []byte("[DEFAULT]\n# Add Path to Wallpaper directory\n");
+      defaultConfig := []byte("[DIRECTORY]\n# Add Path to Wallpaper directory \n #WallpaperPath = \"Enter wallpaper directory path\"\n");
       err = os.WriteFile(PATH, defaultConfig, 0644);
       if err != nil {
           fmt.Println("Error file", err)
