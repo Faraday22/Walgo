@@ -4,6 +4,11 @@ import (
   "fmt"
 )
 
+/* 
+
+  Begining of finding directory to set in condif file if its default text
+
+*/
 
 var correctInput = false
 func CheckUserWallDir() {

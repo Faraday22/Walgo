@@ -9,12 +9,15 @@ import (
 )
 
 func CheckConfigDir() {
+  // Sets path for the directory of applications config
   PATH := path.Join(os.Getenv("HOME"), ".config/Walgo");
   _, err := os.Stat(PATH);
   
+  // If it exist exits program
   if err == nil {
     return;
   } else if os.IsNotExist(err) {
+      // If the directory doesn't exist its created
       fmt.Println("Config ", PATH, " doesn't exist");
       err = os.MkdirAll(PATH, 0775);
       if err != nil {
@@ -23,6 +26,8 @@ func CheckConfigDir() {
       }
       
       fmt.Println("Config directory created at: ", PATH);
+      // Calls other function to find if config file
+      // is generated
       CheckConfigFile();
       fmt.Println("Rerun Walgo")
       os.Exit(0);

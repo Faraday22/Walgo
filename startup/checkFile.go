@@ -9,11 +9,13 @@ import (
 )
 
 func CheckConfigFile(){
+  // Sets path of where the config file should be
   PATH := path.Join(os.Getenv("HOME"), ".config/Walgo/Walgo.toml");
   _, err := os.Stat(PATH);
   
   if err == nil {
     return;
+    // If config file exists skips process
   } else if os.IsNotExist(err) {
       fmt.Println("Config ", PATH, " doesn't exist");
       // Created Walgo.toml file 

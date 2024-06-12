@@ -7,6 +7,8 @@ import (
 
 )
 
+
+// In the name clears the screen
 func Clear_screen(){
 
   cmd := exec.Command("clear");  
