@@ -28,7 +28,7 @@ func CheckConfigDir() {
       fmt.Println("Config directory created at: ", PATH);
       // Calls other function to find if config file
       // is generated
-      CheckConfigFile();
+      CheckConfigFile("Enter wallpapers directory path");
       fmt.Println("Rerun Walgo")
       os.Exit(0);
   } else {

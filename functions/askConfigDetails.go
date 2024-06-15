@@ -1,11 +1,11 @@
 package functions
 
-
 import (
-  "fmt"
-  "os"
-  "github.com/BurntSushi/toml"
+	"fmt"
+	"os"
 
+	"github.com/BurntSushi/toml"
+	"github.com/faraday22/Walgo/startup"
 )
 
 func ConfigDetails() {
@@ -42,8 +42,11 @@ func ConfigDetails() {
   
 
   // Asks for custom directory if the path is default in the config file
-  if config.DIRECTORY.WallpaperPath == "Enter wallpaper directory path" {
+  if config.DIRECTORY.WallpaperPath == "Enter wallpapers directory path" {
     Clear_screen();
     CheckUserWallDir();
-  } 
+    config.DIRECTORY.WallpaperPath = UserInputDir; 
+    os.Remove(configPath)
+    startup.CheckConfigFile(config.DIRECTORY.WallpaperPath)
+  }
 }

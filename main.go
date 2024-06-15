@@ -10,7 +10,7 @@ import (
 func main(){
   functions.Clear_screen();
   startup.CheckConfigDir();
-  startup.CheckConfigFile();
+  startup.CheckConfigFile("Enter wallpapers directory path");
   
   functions.ConfigDetails();
   functions.WmCommands();

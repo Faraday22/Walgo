@@ -4,25 +4,22 @@ import (
   "fmt"
 )
 
-/* 
-
-  Begining of finding directory to set in condif file if its default text
-
-*/
-
 var correctInput = false
+var UserInputDir string = ""
 func CheckUserWallDir() {
   if correctInput == false {
     fmt.Println("What is the Directory you keep you wallpapers in?");
-    var userInputDir string = "";
-    fmt.Scanln(&userInputDir);
+    fmt.Scanln(&UserInputDir);
 
     fmt.Println("Is this the correct directory?");
     fmt.Println("Y/n");
     var isCorrectDir string = "";
     fmt.Scanln(&isCorrectDir);
     if isCorrectDir == "Y" || isCorrectDir == "y" {
-        // Continues
+        Clear_screen()
+        // Warning Message
+        fmt.Println("You will not be able to change the\n directory again unless through the config file\n located at ~/.config/Walgo")       
+        fmt.Println("")
     } else if isCorrectDir == "N" || isCorrectDir == "n" {
       CheckUserWallDir();
     } else {
@@ -30,4 +27,4 @@ func CheckUserWallDir() {
       CheckUserWallDir();
     }
   }
-} 
+}
