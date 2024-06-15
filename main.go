@@ -13,5 +13,5 @@ func main(){
   startup.CheckConfigFile("Enter wallpapers directory path");
   
   functions.ConfigDetails();
-  functions.WmCommands();
+  functions.ChangeWallpaper();
 }

@@ -38,7 +38,9 @@ func ConfigDetails() {
   }
 
   fmt.Println("Welcome to Walgo!");  
-  fmt.Printf("Config file path is: %s\n", config.DIRECTORY.WallpaperPath)
+  fmt.Println("");
+  fmt.Printf("Config directory path is: %s\n", config.DIRECTORY.WallpaperPath);
+  fmt.Println("");
   
 
   // Asks for custom directory if the path is default in the config file

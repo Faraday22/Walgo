@@ -2,7 +2,6 @@ package functions
 
 import (
 
-  "fmt"
   "os/exec"
   "bytes"
 )
@@ -24,17 +23,16 @@ func findRunningWM(windowManagers string) bool {
 
 
 
+var CurrentRunningWM string = ""
 
-func WmCommands() {
+// Finds which WM is running from the list
+// in windowManagers array
+func WmEnvironmentSearch() {
 
     for _, windowManagersProcess := range windowManagers {
       if findRunningWM(windowManagers[0]) {
-          /* put function that takes windowManagersProcess
-          *  used the varible and has if BLANK = WM then
-          *  uses the specifi windowManagers command to change the wallpaper
-          */ 
-
-          fmt.Printf("Process %s is running.\n", windowManagersProcess)
+          // exports varible to be used in changeWallpaper.go
+          CurrentRunningWM = windowManagersProcess
         }
     }
 
